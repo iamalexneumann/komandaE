@@ -29,4 +29,4 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "USE_EXT" => "Y"
             )
         );?>
-						
+		<h1><?php $APPLICATION->ShowTitle(null, false); ?></h1>
