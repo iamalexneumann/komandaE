@@ -3,9 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Команда");
 ?>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	".default", 
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news",
+	".default",
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -75,9 +75,9 @@ $APPLICATION->SetTitle("Команда");
 		"SEF_FOLDER" => "/team/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "Y",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"SORT_BY1" => "SORT",
 		"SORT_BY2" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "ASC",
@@ -91,6 +91,7 @@ $APPLICATION->SetTitle("Команда");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => ".default",
+		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -98,6 +99,6 @@ $APPLICATION->SetTitle("Команда");
 		)
 	),
 	false
-);?>
+); ?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

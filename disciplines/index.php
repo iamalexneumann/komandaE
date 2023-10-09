@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Дисциплины");
 ?>
 
-<?$APPLICATION->IncludeComponent(
+<? $APPLICATION->IncludeComponent(
     "bitrix:news",
     ".default",
     array(
@@ -37,6 +37,7 @@ $APPLICATION->SetTitle("Дисциплины");
             3 => "MORE_PHOTO",
             4 => "ATT_LINKED_FEATURES",
             5 => "ATT_LINKED_PRICES",
+            6 => "",
         ),
         "DETAIL_SET_CANONICAL_URL" => "Y",
         "DISPLAY_BOTTOM_PAGER" => "Y",
@@ -64,10 +65,8 @@ $APPLICATION->SetTitle("Дисциплины");
             1 => "",
         ),
         "LIST_PROPERTY_CODE" => array(
-            0 => "",
-            1 => "ATT_PREVIEW_TEXT",
-            2 => "",
-            3 => "",
+            0 => "ATT_PREVIEW_TEXT",
+            1 => "",
         ),
         "MESSAGE_404" => "",
         "META_DESCRIPTION" => "-",
@@ -84,9 +83,9 @@ $APPLICATION->SetTitle("Дисциплины");
         "SEF_FOLDER" => "/disciplines/",
         "SEF_MODE" => "Y",
         "SET_LAST_MODIFIED" => "Y",
-        "SET_STATUS_404" => "N",
+        "SET_STATUS_404" => "Y",
         "SET_TITLE" => "Y",
-        "SHOW_404" => "N",
+        "SHOW_404" => "Y",
         "SORT_BY1" => "SORT",
         "SORT_BY2" => "ACTIVE_FROM",
         "SORT_ORDER1" => "ASC",
@@ -102,6 +101,7 @@ $APPLICATION->SetTitle("Дисциплины");
         "COMPONENT_TEMPLATE" => ".default",
         "COMPOSITE_FRAME_MODE" => "A",
         "COMPOSITE_FRAME_TYPE" => "AUTO",
+        "FILE_404" => "",
         "SEF_URL_TEMPLATES" => array(
             "news" => "",
             "section" => "",
@@ -109,6 +109,6 @@ $APPLICATION->SetTitle("Дисциплины");
         )
     ),
     false
-);?>
+); ?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
