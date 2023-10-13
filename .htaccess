@@ -12,10 +12,8 @@ ErrorDocument 404 /404.php
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 
   Redirect 301 /disciplines/judo https://komandae.ru/disciplines/judo/
-  Redirect 301 /mission https://komandae.ru/mission/
   Redirect 301 /people https://komandae.ru/team/
   Redirect 301 /table https://komandae.ru/schedule/
-  Redirect 301 /contacts https://komandae.ru/contacts/
   Redirect 301 /rekv https://komandae.ru/requisites/
   Redirect 301 /oferta https://komandae.ru/offer/
   Redirect 301 /akido https://komandae.ru/disciplines/aykido/
