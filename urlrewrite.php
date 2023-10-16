@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  6 => 
+  11 => 
   array (
     'CONDITION' => '#^/disciplines/#',
     'RULE' => '',
@@ -8,7 +8,7 @@ $arUrlRewrite=array (
     'PATH' => '/disciplines/index.php',
     'SORT' => 100,
   ),
-  3 => 
+  10 => 
   array (
     'CONDITION' => '#^/schedule/#',
     'RULE' => '',
@@ -24,7 +24,7 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  5 => 
+  9 => 
   array (
     'CONDITION' => '#^/team/#',
     'RULE' => '',

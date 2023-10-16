@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Команда");
+$APPLICATION->SetPageProperty("description", "Познакомьтесь с нашими ⭐ опытными и квалифицированными тренерами по единоборствам в Москве. ⛰ Они предлагают профессиональное обучение, персональную поддержку и вдохновляют на достижение новых высот. ✨ Записывайтесь на бесплатное пробное занятие по ☎️ 8 (999) 999-87-57, а также через WhatsApp и Telegram.");
+$APPLICATION->SetPageProperty("title", "Тренеры | Мастера спорта | Инструкторы единоборств и боевых искусств");
+$APPLICATION->SetTitle("Наша команда");
 ?>
 
 <? $APPLICATION->IncludeComponent(

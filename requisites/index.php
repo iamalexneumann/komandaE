@@ -1,5 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Ознакомьтесь с реквизитами ⭐ школы единоборств \"Команда Е\" и контактами. ✍️ Узнайте ОГРН, ИНН, КПП, адрес и другую информацию..️✨ Присоединяйтесь к нашей команде, записывайтесь на бесплатное пробное занятие по ☎️ 8 (999) 999-87-57, а также через WhatsApp и Telegram.");
+$APPLICATION->SetPageProperty("title", "Реквизиты клуба единоборств");
 $APPLICATION->SetTitle("Реквизиты");
 ?>
 
