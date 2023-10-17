@@ -2,6 +2,7 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
+require($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/variables.php');
 /**
  * @var CMain $APPLICATION
  * @var CMain $CurDir
@@ -11,17 +12,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var COption $siteparam_scripts_head
  * @var COption $siteparam_scripts_body_before
  * @var COption $siteparam_main_logo
- * @var COption $siteparam_phone
- * @var COption $siteparam_phone_tel
- * @var COption $siteparam_mobile_phone
- * @var COption $siteparam_mobile_phone_tel
+ * @var COption $siteparam_main_phone
+ * @var COption $siteparam_main_phone_tel
  * @var COption $siteparam_schedule
- * @var COption $siteparam_whatsapp
- * @var COption $siteparam_whatsapp_tel
+ * @var COption $siteparam_whatsapp_number
+ * @var COption $siteparam_whatsapp_number_tel
  * @var COption $siteparam_whatsapp_message
- * @var COption $siteparam_telegram
+ * @var COption $siteparam_telegram_link
  * @var COption $siteparam_address
- * @var COption $siteparam_email
  */
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
@@ -69,10 +67,10 @@ $other_patterns = [
 <body id="body-area">
 <?= $siteparam_scripts_body_before; ?>
 <?php $APPLICATION->ShowPanel(); ?>
-    <header class="main-header">
+    <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
             <a <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>
-                class="main-header__logo logo"
+                class="navbar__logo logo"
                 title="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
                 <img src="<?= $siteparam_main_logo; ?>"
                      class="logo__img" width="70" height="40" alt="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
@@ -83,10 +81,70 @@ $other_patterns = [
                     <span class="logo__name"><?= $siteparam_logo_name; ?></span>
                 </span>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-label="<?= Loc::getMessage('HEADER_NAVBAR_ARIA_LABEL'); ?>">
+                <span class="navbar-toggler__text"><?= Loc::getMessage('HEADER_NAVBAR_TOGGLER_TEXT'); ?></span>
+                <span class="navbar-toggler__icon"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="navbar-wrapper">
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <?php
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "main_menu",
+                        array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "main_submenu",
+                            "COMPOSITE_FRAME_MODE" => "A",
+                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "2",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "main_menu",
+                            "USE_EXT" => "Y",
+                            "COMPONENT_TEMPLATE" => "main_menu"
+                        ),
+                        false
+                    ); ?>
+                    <div class="navbar-contacts">
+                        <div class="navbar-contacts__wrapper">
+                            <a class="navbar-contacts__main-phone" href="tel:<?= $siteparam_main_phone_tel; ?>"
+                               title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+                            <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
+                            <ul class="navbar-contacts__messengers messengers">
+                                <?php if ($siteparam_whatsapp_number): ?>
+                                <li class="messengers__item">
+                                    <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+                                       target="_blank"
+                                       class="messengers__link messengers__link_whatsapp"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_WHATSAPP_TITLE'); ?>">WhatsApp</a>
+                                </li>
+                                <?php endif; ?>
+                                <?php if ($siteparam_telegram_link): ?>
+                                <li class="messengers__item">
+                                    <a href="https://t.me/<?= $siteparam_telegram_link; ?>"
+                                       target="_blank"
+                                       class="messengers__link messengers__link_telegram"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_TELEGRAM_TITLE'); ?>">Telegram</a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                            <?php endif; ?>
+                        </div>
+                        <?php if ($siteparam_address): ?>
+                        <div class="navbar-contacts__address"><?= $siteparam_address; ?></div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-<main class="<?= (use_wide_template($CurDir, $patterns) === false) ? 'main-area' : 'wide-area'; ?>">
-<?php if (!($CurDir === '/') && (use_wide_template($CurDir, $other_patterns) === false)): ?>
+    </nav>
+    <main class="<?= (use_wide_template($CurDir, $patterns) === false) ? 'main-area' : 'wide-area'; ?>">
+    <?php if (!($CurDir === '/') && (use_wide_template($CurDir, $other_patterns) === false)): ?>
     <header class="page-header">
         <div class="container">
             <?php
@@ -105,6 +163,6 @@ $other_patterns = [
         </div>
     </header>
     <?php if (use_wide_template($CurDir, $patterns) === false): ?>
-        <div class="container">
+    <div class="container">
     <?php endif; ?>
-<?php endif; ?>
+    <?php endif; ?>

@@ -1,12 +1,16 @@
 BX.ready(function() {
-    const navbarContainer = document.querySelector('.navbar');
-    const btnElements = navbarContainer.querySelectorAll('.navbar__btn, .navbar__close');
+    const navbarTogglerBtn = document.querySelector('.navbar-toggler');
+    navbarTogglerBtn.addEventListener('click', navbarToggler);
 
-    function togglenavbar() {
-        navbarContainer.classList.toggle('open');
+    function navbarToggler() {
+        const navbarTogglerIcon = document.querySelector('.navbar-toggler__icon .fa-solid');
+
+        if (navbarTogglerIcon.classList.contains('fa-bars')) {
+            navbarTogglerIcon.classList.remove('fa-bars');
+            navbarTogglerIcon.classList.add('fa-xmark');
+        } else {
+            navbarTogglerIcon.classList.remove('fa-xmark');
+            navbarTogglerIcon.classList.add('fa-bars');
+        }
     }
-
-    btnElements.forEach(function(btnElement) {
-        btnElement.addEventListener('click', togglenavbar);
-    });
-});
+})

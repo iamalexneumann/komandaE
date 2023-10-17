@@ -1,13 +1,6 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная", 
-		SITE_DIR."/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Дисциплины", 
 		SITE_DIR."/disciplines/", 
 		Array(), 
