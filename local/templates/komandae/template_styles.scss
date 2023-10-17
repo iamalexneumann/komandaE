@@ -287,6 +287,47 @@ h6,
   }
 }
 
+.main-area {
+  padding-top: 80px;
+}
+
+.wide-area {
+
+}
+
+.breadcrumb {
+  font-size: var(--font-size-small);
+  margin: 0;
+
+  .breadcrumb-item {
+    a {
+      color: var(--dark-color);
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+
+    &.active {
+      color: var(--text-mutted-color);
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--gray-color);
+    content: var(--bs-breadcrumb-divider, "—");
+  }
+}
+
+.page-header {
+  margin-bottom: 40px;
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
 .main-footer {
   background: var(--primary-color);
   color: var(--white-color);

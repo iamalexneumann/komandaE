@@ -150,7 +150,7 @@ $other_patterns = [
             <?php
             $APPLICATION->IncludeComponent(
                 "bitrix:breadcrumb",
-                ".default",
+                "breadcrumb",
                 Array(
                     "START_FROM" => "0",
                     "PATH" => "",

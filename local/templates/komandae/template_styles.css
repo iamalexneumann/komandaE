@@ -218,6 +218,28 @@ h6,
     overflow: hidden;
     text-overflow: ellipsis; }
 
+.main-area {
+  padding-top: 80px; }
+
+.breadcrumb {
+  font-size: var(--font-size-small);
+  margin: 0; }
+  .breadcrumb .breadcrumb-item a {
+    color: var(--dark-color); }
+    .breadcrumb .breadcrumb-item a:hover {
+      color: var(--primary-color); }
+  .breadcrumb .breadcrumb-item.active {
+    color: var(--text-mutted-color); }
+  .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--gray-color);
+    content: var(--bs-breadcrumb-divider, "—"); }
+
+.page-header {
+  margin-bottom: 40px; }
+  .page-header__title {
+    margin-top: 10px;
+    margin-bottom: 0; }
+
 .main-footer {
   background: var(--primary-color);
   color: var(--white-color); }
