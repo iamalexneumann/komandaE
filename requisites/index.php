@@ -16,6 +16,6 @@ $APPLICATION->SetTitle("Реквизиты");
     <p><span class="fw-bold">Адрес нахождения офиса:</span> Российская Федерация, г. Москва, ул. Электрозаводская, д. 58, корпус 11, помещение 407</p>
     <p><span class="fw-bold">Банковские реквизиты:</span> р/с 40802810300000013406 АО "БАНК РУССКИЙ СТАНДАРТ" г. Москва к/с 30101810845250000151 БИК 044525151</p>
     <p><span class="fw-bold">ОКВЭД:</span> 85.41.1 Образование в области спорта и отдыха</p>
-    <p><span class="fw-bold">Контактный телефон:</span> +7 (926) 684-53-50</p>
+    <p><span class="fw-bold">Контактный телефон:</span> <a href="tel:<?= $siteparam_main_phone_tel; ?>"><?= $siteparam_main_phone; ?></a></p>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
