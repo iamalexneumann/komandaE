@@ -4,7 +4,8 @@ $APPLICATION->SetPageProperty("description", "Команда Е - это спо�
 $APPLICATION->SetPageProperty("title", "Бойцовский клуб в Москве для сильных духом и телом");
 $APPLICATION->SetTitle("Миссия нашего клуба единоборств");
 ?>
-    <div class="clearfix mission-section mission-section_right">
+<div class="page-mission">
+    <div class="clearfix page-mission__section mission-section mission-section_right">
         <figure class="figure-media figure-media_float-right">
             <img src="mission-1.webp" alt="">
         </figure>
@@ -13,7 +14,7 @@ $APPLICATION->SetTitle("Миссия нашего клуба единоборс�
             <p class="mission-section__text">Нерешительных делаем уверенными, слабых - сильными, робких – смелыми. Учим "держать удар" перед трудностями и достигать любой цели.</p>
         </div>
         </div>
-    <div class="clearfix mission-section mission-section_left">
+    <div class="clearfix page-mission__section mission-section mission-section_left">
         <figure class="figure-media figure-media_float-left">
             <img src="mission-2.webp" alt="">
         </figure>
@@ -23,7 +24,7 @@ $APPLICATION->SetTitle("Миссия нашего клуба единоборс�
 
         </div>
     </div>
-    <div class="clearfix mission-section mission-section_right">
+    <div class="clearfix page-mission__section mission-section mission-section_right">
         <figure class="figure-media figure-media_float-right">
             <img src="mission-3.webp" alt="">
         </figure>
@@ -31,4 +32,5 @@ $APPLICATION->SetTitle("Миссия нашего клуба единоборс�
             <p class="mission-section__text">Наша самоотдача в работе – не только призвание и преданность любимому делу, это еще и благодарность. За шесть лет работы мы не раз боролись за право на жизнь, не раз уклонялись от ударов. Но… избежали нокдауна. Устояли на ногах и стали сильнее. Во многом благодаря людям, которые доверили нам своих детей. Родители воспитанников проявили бойцовские качества и поступили по Кодексу чести нашего клуба. Поставили дружбу, взаимопомощь и взаимовыручку превыше всего! Рэй!</p>
         </div>
     </div>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
