@@ -1,4 +1,11 @@
 <?php
+$MESS['BTN_CLOSE_LABEL'] = 'Закрыть';
+$MESS['CALLBACK_MODAL_TITLE'] = 'Заказать звонок';
+
+$MESS['FORM_SECTION_TITLE'] = 'Станьте частью Команды Е';
+$MESS['FORM_SECTION_SUBTITLE'] = '<span>Запишитесь на бесплатное пробное занятие.</span>
+<span>Оставьте свой номер телефона и мы перезвоним Вам в течение одного часа.</span>';
+
 $MESS['FOOTER_MESSENGERS_TELEGRAM_TITLE'] = 'Написать в Telegram';
 $MESS['FOOTER_MESSENGERS_WHATSAPP_TITLE'] = 'Написать в WhatsApp';
 $MESS['FOOTER_EMAIL_TITLE'] = 'Написать на почту';

@@ -170,6 +170,18 @@ h6,
   --bs-btn-disabled-bg: #ffc107;
   --bs-btn-disabled-border-color: #ffc107; }
 
+.modal .modal-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--dark-color); }
+.modal .modal-header {
+  border-radius: 0; }
+  .modal .modal-header .btn-close {
+    background: none;
+    font-size: 1.25rem; }
+.modal .modal-content {
+  border-radius: 0; }
+
 .figure-media {
   position: relative;
   width: 450px;
@@ -703,5 +715,33 @@ h6,
     font-size: 1.125rem; }
     .form-section__subtitle span {
       display: block; }
+
+.main-section {
+  padding: 80px 0; }
+  @media (max-width: 767.98px) {
+    .main-section {
+      padding: 40px 0; } }
+  .main-section_light-bg-color {
+    background: #FAFAFA; }
+  .main-section__header {
+    text-align: center;
+    margin-bottom: 50px; }
+    @media (max-width: 767.98px) {
+      .main-section__header {
+        margin-bottom: 30px; } }
+  .main-section__title {
+    margin: 0; }
+  .main-section__subtitle {
+    font-size: 1.25rem;
+    color: var(--text-mutted-color);
+    max-width: 700px;
+    margin: 15px auto 0; }
+
+.yandex-reviews {
+  width: 700px;
+  margin: 0 auto; }
+  @media (max-width: 767.98px) {
+    .yandex-reviews {
+      width: 100%; } }
 
 /*# sourceMappingURL=template_styles.css.map */

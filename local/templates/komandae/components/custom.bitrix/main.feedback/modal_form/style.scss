@@ -4,12 +4,42 @@
     margin-bottom: 1rem;
   }
 
+  &__label {
+    font-weight: 500;
+  }
+
   &__form-control {
-    background: var(--light-bg-color) !important;
+    padding: 18px 20px;
+    border-radius: 0;
+    border: none;
+    background: #FAFAFA;
+    color: var(--dark-color);
+    transition: background-color .25s ease-in-out;
+
+    &:hover {
+      background: #EFEFEF;
+    }
 
     &:focus {
-      border-color: var(--secondary-color) !important;
-      box-shadow: 0 0 0 .25rem rgba(17, 92, 250, .25) !important;
+      background: #EFEFEF;
+      color: var(--dark-color);
+      box-shadow: 0 0 0 .25rem rgba(54,52,142,.25);
     }
+  }
+
+  &__form-check {
+    margin-top: 15px;
+    font-size: var(--font-size-small);
+  }
+
+  &__privacy-link {
+
+    &:hover {
+      color: var(--dark-color);
+    }
+  }
+
+  .btn {
+    min-width: 175px;
   }
 }

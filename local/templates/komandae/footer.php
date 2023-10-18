@@ -32,11 +32,8 @@ $patterns = [
 <div class="form-section">
     <div class="container">
         <div class="form-section__header">
-            <div class="form-section__title">Станьте частью Команды Е</div>
-            <div class="form-section__subtitle">
-                <span>Запишитесь на бесплатное пробное занятие.</span>
-                <span>Оставьте свой номер телефона и мы перезвоним Вам в течение одного часа.</span>
-            </div>
+            <div class="form-section__title"><?= Loc::getMessage('FORM_SECTION_TITLE'); ?></div>
+            <div class="form-section__subtitle"><?= Loc::getMessage('FORM_SECTION_SUBTITLE'); ?></div>
         </div>
         <?php $APPLICATION->IncludeComponent(
             "custom.bitrix:main.feedback",
@@ -68,7 +65,7 @@ $patterns = [
                     <a <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>
                         class="footer-logo"
                         title="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
-                        <img src="<?=$siteparam_footer_logo ?: $siteparam_main_logo; ?>"
+                        <img src="<?=$siteparam_footer_logo; ?>"
                              class="footer-logo__img" width="110" height="110"
                              alt="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
                         <span class="footer-logo__wrapper">
@@ -144,6 +141,47 @@ $patterns = [
         </div>
     </div>
 </footer>
+
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?php
+                $APPLICATION->IncludeComponent(
+                    "custom.bitrix:main.feedback",
+                    "modal_form",
+                    array(
+                        "COMPOSITE_FRAME_MODE" => "A",
+                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                        "EMAIL_TO" => $siteparam_email,
+                        "EVENT_MESSAGE_ID" => array(
+                            0 => "7",
+                        ),
+                        "OK_TEXT" => Loc::getMessage('MAIN_FORM_OK_TEXT'),
+                        "REQUIRED_FIELDS" => array(
+                            1 => "USER_PHONE",
+                        ),
+                        "USE_CAPTCHA" => "N",
+                        "COMPONENT_TEMPLATE" => "modal_form",
+                        "REDIRECT_URL" => "",
+                        "AJAX_MODE" => "Y",
+                        "AJAX_OPTION_SHADOW" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "Y",
+                        "AJAX_OPTION_HISTORY" => "N",
+                    ),
+                    false
+                ); ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <a href="#body-area" class="to-top-btn" title="<?= Loc::getMessage('FOOTER_TO_TOP_BTN_TEXT'); ?>"><i class="fa-solid fa-angle-up"></i></a>
 <?php if ($siteparam_whatsapp_number): ?>

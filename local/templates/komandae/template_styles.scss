@@ -180,6 +180,25 @@ h6,
   --bs-btn-disabled-border-color: #ffc107;
 }
 
+.modal {
+  .modal-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+  }
+  .modal-header {
+    border-radius: 0;
+
+    .btn-close {
+      background: none;
+      font-size: 1.25rem;
+    }
+  }
+  .modal-content {
+    border-radius: 0;
+  }
+}
+
 .figure-media {
   position: relative;
   width: 450px;
@@ -958,5 +977,46 @@ h6,
     span {
       display: block;
     }
+  }
+}
+
+.main-section {
+  padding: 80px 0;
+
+  @media(max-width: 767.98px) {
+    padding: 40px 0;
+  }
+
+  &_light-bg-color {
+    background: #FAFAFA;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media(max-width: 767.98px) {
+      margin-bottom: 30px;
+    }
+  }
+  
+  &__title {
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    color: var(--text-mutted-color);
+    max-width: 700px;
+    margin: 15px auto 0;
+  }
+}
+
+.yandex-reviews {
+  width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: 767.98px) {
+    width: 100%;
   }
 }
