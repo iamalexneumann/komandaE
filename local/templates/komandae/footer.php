@@ -63,7 +63,7 @@ $patterns = [
                             <a href="<?= $siteparam_telegram_link; ?>"
                                class="messengers__link messengers__link_telegram"
                                target="_blank"
-                               title="Написать в Telegram">Telegram</a>
+                               title="<?= Loc::getMessage('FOOTER_MESSENGERS_TELEGRAM_TITLE'); ?>">Telegram</a>
                         </li>
                         <?php endif; ?>
                         <?php if ($siteparam_whatsapp_number): ?>
@@ -71,7 +71,7 @@ $patterns = [
                             <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
                                class="messengers__link messengers__link_whatsapp"
                                target="_blank"
-                               title="Написать в WhatsApp">WhatsApp</a>
+                               title="<?= Loc::getMessage('FOOTER_MESSENGERS_WHATSAPP_TITLE'); ?>">WhatsApp</a>
                         </li>
                         <?php endif; ?>
                     </ul>
@@ -113,6 +113,25 @@ $patterns = [
         </div>
     </div>
 </footer>
+
+<a href="#body-area" class="to-top-btn" title="<?= Loc::getMessage('FOOTER_TO_TOP_BTN_TEXT'); ?>"><i class="fa-solid fa-angle-up"></i></a>
+<?php if ($siteparam_whatsapp_number): ?>
+<a class="whatsapp-btn"
+   href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+   target="_blank"
+   title="<?= Loc::getMessage('FOOTER_MESSENGERS_WHATSAPP_TITLE'); ?>">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<?php endif; ?>
+<?php if ($siteparam_telegram_link): ?>
+<a class="telegram-btn"
+   href="<?= $siteparam_telegram_link; ?>"
+   target="_blank"
+   title="<?= Loc::getMessage('FOOTER_MESSENGERS_TELEGRAM_TITLE'); ?>">
+    <i class="fa-brands fa-telegram-plane"></i>
+</a>
+<?php endif; ?>
+
 <script>
     BX.message({
         FOOTER_SHOW_MORE_MORE_BTN: '<?= Loc::getMessage('FOOTER_SHOW_MORE_MORE_BTN'); ?>',
@@ -120,6 +139,6 @@ $patterns = [
     });
 </script>
 <?= $siteparam_scripts_body_after; ?>
-<a href="#body-area" class="to-top-btn" title="<?= Loc::getMessage('FOOTER_TO_TOP_BTN_TEXT'); ?>"><i class="fa-solid fa-angle-up"></i></a>
+
 </body>
 </html>

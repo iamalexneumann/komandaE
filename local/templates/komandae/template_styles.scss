@@ -738,6 +738,49 @@ h6,
   }
 }
 
+.whatsapp-btn, .telegram-btn {
+  position: fixed;
+  z-index: 100;
+  right: 35px;
+  bottom: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .25s ease-in-out;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.14);
+
+  @media (max-width: 767.98px) {
+    font-size: 1.25rem;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.telegram-btn {
+  background-color: #0088cc;
+  right: 105px;
+
+  @media (max-width: 767.98px) {
+    right: 70px;
+  }
+}
+
+.whatsapp-btn:hover, .telegram-btn:hover {
+  color: #ffffff;
+  opacity: 0.85;
+}
+
 .to-top-btn {
   position: fixed;
   z-index: 100;
@@ -762,8 +805,8 @@ h6,
   }
 
   @media (max-width: 767.98px) {
-    bottom: 65px;
-    left: 15px;
+    bottom: 20px;
+    left: 20px;
     width: 35px;
     height: 35px;
     font-size: 1rem;
