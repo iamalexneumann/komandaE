@@ -20,7 +20,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <?php if (!empty($arResult)): ?>
-<ul class="footer-menu">
+<ul class="footer-menu row">
 <?php
 $previousLevel = 0;
 

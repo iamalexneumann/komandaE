@@ -30,7 +30,7 @@ $APPLICATION->SetTitle("Контакты");
             </div>
             <?php endif; ?>
 
-            <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
+            <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link || $siteparam_vk_link): ?>
             <ul class="messengers page-contacts__messengers">
                 <?php if ($siteparam_telegram_link): ?>
                 <li class="messengers__item">
