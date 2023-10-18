@@ -29,6 +29,37 @@ $patterns = [
     </div>
 <?php endif; ?>
 </main>
+<div class="form-section">
+    <div class="container">
+        <div class="form-section__header">
+            <div class="form-section__title">Станьте частью Команды Е</div>
+            <div class="form-section__subtitle">
+                <span>Запишитесь на бесплатное пробное занятие.</span>
+                <span>Оставьте свой номер телефона и мы перезвоним Вам в течение одного часа.</span>
+            </div>
+        </div>
+        <?php $APPLICATION->IncludeComponent(
+            "custom.bitrix:main.feedback",
+            "main_form",
+            Array(
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                "EMAIL_TO" => $siteparam_email,
+                "EVENT_MESSAGE_ID" => array(
+                    0 => "7",
+                ),
+                "OK_TEXT" => Loc::getMessage('MAIN_FORM_OK_TEXT'),
+                "REQUIRED_FIELDS" => array("USER_PHONE"),
+                "USE_CAPTCHA" => "N",
+                "AJAX_MODE" => "Y",
+                "AJAX_OPTION_SHADOW" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "AJAX_OPTION_HISTORY" => "N",
+            )
+        ); ?>
+    </div>
+</div>
 <footer class="main-footer">
     <div class="footer-content">
         <div class="container">

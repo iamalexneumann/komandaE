@@ -62,7 +62,7 @@ $APPLICATION->SetTitle("Контакты");
             <a href="mailto:<?= $siteparam_email; ?>" class="page-contacts__email-link"><?= $siteparam_email; ?></a>
 
             <button type="button"
-                    class="btn btn-sm btn-primary page-contacts__callback-btn"
+                    class="btn btn-primary page-contacts__callback-btn"
                     data-bs-toggle="modal"
                     data-bs-target="#callbackModal"
                     data-bs-modal-title="Заказать звонок">Заказать звонок</button>

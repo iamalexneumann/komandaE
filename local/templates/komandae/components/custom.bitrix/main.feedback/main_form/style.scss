@@ -1,0 +1,56 @@
+.main-form {
+  &__wrapper {
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-end;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__item {
+    margin-right: 15px;
+    min-width: 470px;
+
+    @media (max-width: 991.98px) {
+      min-width: auto;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form-control {
+    padding: 18px 20px;
+    border-radius: 0;
+    border: none;
+    color: var(--dark-color);
+
+    &:hover {
+      background: #FAFAFA;
+    }
+
+    &:focus {
+      background: #FAFAFA;
+      color: var(--dark-color);
+      box-shadow: 0 0 0 .25rem rgba(41,41,41,.25);
+    }
+  }
+
+  &__form-check {
+    margin-top: 15px;
+    font-size: var(--font-size-small);
+  }
+
+  &__privacy-link {
+
+    &:hover {
+      color: var(--dark-color);
+    }
+  }
+
+  .btn {
+    min-width: 175px;
+  }
+}

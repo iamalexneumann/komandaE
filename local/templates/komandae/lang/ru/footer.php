@@ -9,3 +9,5 @@ $MESS['FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'] = 'Карта сайта';
 $MESS['FOOTER_TO_TOP_BTN_TEXT'] = 'Наверх';
 $MESS['FOOTER_SHOW_MORE_MORE_BTN'] = 'Развернуть';
 $MESS['FOOTER_SHOW_MORE_LESS_BTN'] = 'Свернуть';
+
+$MESS['MAIN_FORM_OK_TEXT'] = 'Ваша заявка отправлена. Мы перезвоним Вам в течение одного часа.';
