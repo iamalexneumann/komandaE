@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Наша команда");
 
 <? $APPLICATION->IncludeComponent(
 	"bitrix:news",
-	".default",
+	"team",
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
