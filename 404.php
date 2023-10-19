@@ -1,4 +1,4 @@
-<?
+<?php
 include_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/urlrewrite.php');
 
 CHTTP::SetStatus("404 Not Found");
@@ -6,15 +6,24 @@ CHTTP::SetStatus("404 Not Found");
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-$APPLICATION->SetTitle("404 Not Found");
+$APPLICATION->SetTitle("Ошибка 404 - страница не найдена");
+?>
 
-$APPLICATION->IncludeComponent("bitrix:main.map", ".default", Array(
-	"LEVEL"	=>	"3",
-	"COL_NUM"	=>	"2",
-	"SHOW_DESCRIPTION"	=>	"Y",
-	"SET_TITLE"	=>	"Y",
-	"CACHE_TIME"	=>	"36000000"
-	)
-);
+<div class="h5 mt-0">Выберите любую другую страницу из списка:</div>
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?php $APPLICATION->IncludeComponent(
+    "bitrix:main.map",
+    "main_map",
+    Array(
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "COL_NUM" => "1",
+        "COMPOSITE_FRAME_MODE" => "A",
+        "COMPOSITE_FRAME_TYPE" => "AUTO",
+        "LEVEL" => "10",
+        "SET_TITLE" => "N",
+        "SHOW_DESCRIPTION" => "N"
+    )
+); ?>
+
+<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php"); ?>
