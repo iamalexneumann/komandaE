@@ -62,8 +62,8 @@ $aMenuLinks = Array(
 		"" 
 	),
     Array(
-        "Оферта",
-        SITE_DIR."/offer/",
+        "Контакты",
+        SITE_DIR."/contacts/",
         Array(),
         Array(
             'FROM_IBLOCK' => 1,
@@ -81,15 +81,15 @@ $aMenuLinks = Array(
         ),
         ""
     ),
-	Array(
-		"Контакты", 
-		SITE_DIR."/contacts/", 
-		Array(),
+    Array(
+        "Оферта",
+        SITE_DIR."/offer/",
+        Array(),
         Array(
             'FROM_IBLOCK' => 1,
             'DEPTH_LEVEL' => 2,
         ),
-		"" 
-	)
+        ""
+    ),
 );
 ?>
