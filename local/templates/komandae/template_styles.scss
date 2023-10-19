@@ -1025,3 +1025,13 @@ h6,
     width: 100%;
   }
 }
+
+.seo-text {
+  &_top {
+    margin-bottom: 60px;
+  }
+
+  &_bottom {
+    margin-top: 60px;
+  }
+}

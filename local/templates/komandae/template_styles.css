@@ -748,4 +748,9 @@ h6,
     .yandex-reviews {
       width: 100%; } }
 
+.seo-text_top {
+  margin-bottom: 60px; }
+.seo-text_bottom {
+  margin-top: 60px; }
+
 /*# sourceMappingURL=template_styles.css.map */
