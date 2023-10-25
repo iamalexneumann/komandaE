@@ -85,6 +85,7 @@ else:
     </div>
 
     <input type="hidden" name="PARAMS_HASH" value="<?=$arResult['PARAMS_HASH']?>">
+    <input type="hidden" name="SERVICE" value="<?= $GLOBALS['SERVICE']; ?>">
     <input type="submit" name="submit" value="<?= Loc::getMessage('MODAL_FORM_SUBMIT_BTN_TEXT'); ?>" class="btn btn-primary">
 </form>
 <?php endif; ?>

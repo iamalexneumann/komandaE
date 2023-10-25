@@ -15,7 +15,8 @@ switch ($template):
     <button type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#callbackModal">Записаться</button>
+            data-bs-target="#callbackModal"
+            data-bs-modal-title="Записаться на занятие">Записаться</button>
 </div>
 
 <?php

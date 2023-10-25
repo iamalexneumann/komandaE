@@ -77,7 +77,9 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
             <button type="button"
                     class="btn btn-primary"
                     data-bs-toggle="modal"
-                    data-bs-target="#callbackModal"><?= Loc::getMessage('SCHEDULE_LIST_BTN_ORDER_TEXT'); ?></button>
+                    data-bs-target="#callbackModal"
+                    data-bs-modal-title="<?= Loc::getMessage('SCHEDULE_LIST_CALLBACK_MODAL_TITLE'); ?>"
+                    data-bs-modal-service="<?= $arItem['NAME']; ?>"><?= Loc::getMessage('SCHEDULE_LIST_BTN_ORDER_TEXT'); ?></button>
         </div>
     </section>
     <?php endforeach; ?>

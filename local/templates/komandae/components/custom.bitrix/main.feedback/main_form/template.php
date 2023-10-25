@@ -66,6 +66,7 @@ else:
         </label>
     </div>
 
+    <input type="hidden" name="SERVICE" value="<?= $GLOBALS['SERVICE']; ?>">
     <input type="hidden" name="PARAMS_HASH" value="<?=$arResult['PARAMS_HASH']?>">
 </form>
 <?php endif; ?>

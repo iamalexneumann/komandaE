@@ -42,7 +42,8 @@ $patterns = [
             Array(
                 "COMPOSITE_FRAME_MODE" => "A",
                 "COMPOSITE_FRAME_TYPE" => "AUTO",
-                "EMAIL_TO" => $siteparam_email,
+//                "EMAIL_TO" => $siteparam_email,
+                "EMAIL_TO" => "iamalexneumann@yandex.ru",
                 "EVENT_MESSAGE_ID" => array(
                     0 => "7",
                 ),
@@ -147,7 +148,7 @@ $patterns = [
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <div class="modal-title"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
+                <div class="modal-title"></div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -160,7 +161,8 @@ $patterns = [
                     array(
                         "COMPOSITE_FRAME_MODE" => "A",
                         "COMPOSITE_FRAME_TYPE" => "AUTO",
-                        "EMAIL_TO" => $siteparam_email,
+//                      "EMAIL_TO" => $siteparam_email,
+                        "EMAIL_TO" => "iamalexneumann@yandex.ru",
                         "EVENT_MESSAGE_ID" => array(
                             0 => "7",
                         ),
