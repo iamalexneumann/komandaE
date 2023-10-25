@@ -39,6 +39,7 @@ $APPLICATION->SetTitle("Наша команда");
 			1 => "ATT_DISCIPLINE",
 			2 => "ATT_DETAIL_TEXT",
 			3 => "ATT_PREVIEW_TEXT",
+			4 => "ATT_SCHEDULE",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"DISPLAY_BOTTOM_PAGER" => "Y",

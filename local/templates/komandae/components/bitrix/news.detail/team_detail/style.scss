@@ -66,6 +66,10 @@
 
   &__header {
     margin-bottom: 30px;
+
+    @media (max-width: 992.98px) {
+      margin-top: 60px;
+    }
   }
 
   &__link {
@@ -133,5 +137,58 @@
   &__preview-text {
     font-size: 1.125rem;
     font-weight: 500;
+
+    .sp-lists ul {
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 1rem;
+
+        &::before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font: var(--fa-font-solid);
+          content: "\f559";
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          color: var(--primary-color-lighter);
+        }
+      }
+    }
+  }
+
+  &__detail-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--warning-color);
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team-section {
+  margin-top: 80px;
+
+  &__title {
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--warning-color);
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
 }

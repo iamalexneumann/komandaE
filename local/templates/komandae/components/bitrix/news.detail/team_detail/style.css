@@ -42,6 +42,9 @@
       transform: scale(1.0125); }
   .team-item__header {
     margin-bottom: 30px; }
+    @media (max-width: 992.98px) {
+      .team-item__header {
+        margin-top: 60px; } }
   .team-item__link {
     color: var(--dark-color);
     font-weight: 700; }
@@ -78,5 +81,42 @@
   .team-item__preview-text {
     font-size: 1.125rem;
     font-weight: 500; }
+    .team-item__preview-text .sp-lists ul {
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none; }
+      .team-item__preview-text .sp-lists ul li {
+        margin-bottom: 1rem; }
+        .team-item__preview-text .sp-lists ul li::before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font: var(--fa-font-solid);
+          content: "\f559";
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          color: var(--primary-color-lighter); }
+  .team-item__detail-text {
+    font-size: 1.125rem;
+    font-weight: 500; }
+    .team-item__detail-text::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--warning-color);
+      margin-top: 30px;
+      margin-bottom: 30px; }
+
+.team-section {
+  margin-top: 80px; }
+  .team-section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--warning-color);
+    margin-top: 30px;
+    margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */
