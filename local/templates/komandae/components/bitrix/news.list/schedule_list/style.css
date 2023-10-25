@@ -1,0 +1,28 @@
+.schedule-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px; }
+  .schedule-nav__item {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+
+.schedule-item {
+  margin-bottom: 80px; }
+  .schedule-item__title {
+    margin-top: 0;
+    margin-bottom: 40px; }
+  .schedule-item__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px; }
+    @media (max-width: 575.98px) {
+      .schedule-item__btns {
+        flex-direction: column; } }
+    .schedule-item__btns .btn-outline-primary {
+      margin-right: 15px; }
+      @media (max-width: 575.98px) {
+        .schedule-item__btns .btn-outline-primary {
+          margin-right: 0;
+          margin-bottom: 15px; } }
+
+/*# sourceMappingURL=style.css.map */

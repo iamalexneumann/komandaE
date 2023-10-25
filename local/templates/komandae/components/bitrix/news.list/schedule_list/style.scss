@@ -1,0 +1,46 @@
+.schedule-list {
+
+}
+
+.schedule-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  &__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.schedule-item {
+  margin-bottom: 80px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  &__table {
+
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+    }
+
+    .btn-outline-primary {
+      margin-right: 15px;
+
+      @media (max-width: 575.98px) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
