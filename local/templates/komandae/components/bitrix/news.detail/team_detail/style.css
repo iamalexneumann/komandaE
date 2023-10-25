@@ -118,5 +118,18 @@
     background: var(--warning-color);
     margin-top: 30px;
     margin-bottom: 30px; }
+  .team-section__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px; }
+    @media (max-width: 575.98px) {
+      .team-section__btns {
+        flex-direction: column; } }
+    .team-section__btns .btn-outline-primary {
+      margin-right: 15px; }
+      @media (max-width: 575.98px) {
+        .team-section__btns .btn-outline-primary {
+          margin-right: 0;
+          margin-bottom: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

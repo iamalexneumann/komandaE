@@ -1,5 +1,11 @@
-<?php /** @var $block array */ ?>
+<?php
+/** @var $block array */
+$template = $block['settings']['template']; ?>
 <div class="table-responsive">
+<?php
+switch ($template):
+    case 'schedule':
+?>
     <table class="table table-striped align-middle">
         <thead class="table-primary">
             <?php foreach ($block['rows'] as $index_row => $cols):
@@ -8,9 +14,9 @@
                 <?php foreach ($cols as $index_col => $col): ?>
                 <th scope="col"
                     <?= ($col['style']) ? 'style="' . $col['style'] . '"' : ''; ?>
-                    <?= ($col['style']) ? 'style="' . $col['colspan'] . '"' : ''; ?>
-                    <?= ($col['style']) ? 'style="' . $col['rowspan'] . '"' : ''; ?>
-                ><?= $col['text'] ?>
+                    <?= ($col['style']) ? 'colspan="' . $col['colspan'] . '"' : ''; ?>
+                    <?= ($col['style']) ? 'rowspan="' . $col['rowspan'] . '"' : ''; ?>>
+                    <?= $col['text'] ?>
                 </th>
                 <?php endforeach; ?>
             </tr>
@@ -35,4 +41,26 @@
             endforeach; ?>
         </tbody>
     </table>
+<?php
+        break;
+    case 'default':
+    default:
+?>
+    <table class="table table-bordered">
+        <?php foreach ($block['rows'] as $cols): ?>
+        <tr>
+            <?php
+            foreach ($cols as $col):
+                $col = Sprint\Editor\Blocks\Table::prepareColumn($col); ?>
+                <td <?= ($col['style']) ? 'style="' . $col['style'] . '"' : ''; ?>
+                    <?= ($col['style']) ? 'colspan="' . $col['colspan'] . '"' : ''; ?>
+                    <?= ($col['style']) ? 'rowspan="' . $col['rowspan'] . '"' : ''; ?>><?= $col['text']; ?></td>
+            <?php endforeach; ?>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+<?php
+        break;
+endswitch;
+?>
 </div>

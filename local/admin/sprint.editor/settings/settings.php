@@ -52,6 +52,31 @@ $settings = [
                 ],
             ],
         ],
+        'table' => [
+            'template' => array(
+                'type' => 'select',
+                'value' => array(
+                    'default' => 'По умолчанию',
+                    'schedule' => 'Расписание',
+                )
+            ),
+        ],
+        'button_link' => [
+            'template' => array(
+                'type' => 'select',
+                'value' => array(
+                    'default' => 'По умолчанию',
+                    'page_team' => 'Страница тренера',
+                )
+            ),
+            'type' => [
+                'type'  => 'select',
+                'value' => [
+                    'link' => 'Ссылка',
+                    'button' => 'Кнопка',
+                ],
+            ],
+        ],
         'gallery' => array(
             'type' => array(
                 'type' => 'select',
