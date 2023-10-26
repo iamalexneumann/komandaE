@@ -77,7 +77,7 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 ); ?>
-<ul class="page-navigation pb-80">
+<ul class="page-navigation">
     <?php if ($arResult['PREV_POST']): ?>
     <li class="page-navigation__item">
         <a href="<?= $arResult['PREV_POST']['DETAIL_PAGE_URL']; ?>"
@@ -106,3 +106,7 @@ $APPLICATION->IncludeComponent(
     </li>
     <?php endif; ?>
 </ul>
+
+<div class="pb-80">
+    <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/share_block.php'); ?>
+</div>

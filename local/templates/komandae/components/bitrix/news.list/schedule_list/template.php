@@ -22,8 +22,9 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 
 $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
+$param_discipline_page = $arParams['DISCIPLINE_PAGE'];
 ?>
-<?php if (count($arResult['ITEMS']) > 0): ?>
+<?php if (count($arResult['ITEMS']) > 0 && ($param_discipline_page !== 'Y')): ?>
 <nav class="schedule-nav">
     <?php foreach ($arResult['ITEMS'] as $arItem_key => $arItem): ?>
     <a class="schedule-nav__item btn btn-sm btn-outline-primary" href="#<?= $arItem['CODE']; ?>"><?= $arItem['NAME']; ?></a>
@@ -52,10 +53,13 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
             ]
         );
     ?>
-    <section class="schedule-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+    <<?= ($param_discipline_page !== 'Y') ? 'section' : 'div'; ?> class="schedule-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+        <?php if ($param_discipline_page !== 'Y'): ?>
         <h<?=$param_small_card_tag_title; ?> class="schedule-item__title" id="<?= $arItem['CODE']; ?>">
             <?= $arItem['NAME']; ?>
         </h<?=$param_small_card_tag_title; ?>>
+        <?php endif; ?>
+
         <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_SCHEDULE']['~VALUE']): ?>
         <div class="schedule-item__table">
             <?php
@@ -72,6 +76,8 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
             ); ?>
         </div>
         <?php endif; ?>
+
+        <?php if ($param_discipline_page !== 'Y'): ?>
         <div class="schedule-item__btns">
             <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="btn btn-outline-primary"><?= Loc::getMessage('SCHEDULE_LIST_BTN_MORE_TEXT'); ?></a>
             <button type="button"
@@ -81,7 +87,8 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     data-bs-modal-title="<?= Loc::getMessage('SCHEDULE_LIST_CALLBACK_MODAL_TITLE'); ?>"
                     data-bs-modal-service="<?= $arItem['NAME']; ?>"><?= Loc::getMessage('SCHEDULE_LIST_BTN_ORDER_TEXT'); ?></button>
         </div>
-    </section>
+        <?php endif; ?>
+    </<?= ($param_discipline_page !== 'Y') ? 'section' : 'div'; ?>>
     <?php endforeach; ?>
 </div>
 <?php

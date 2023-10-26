@@ -10,6 +10,8 @@
 .discipline-detail__preview-text {
   font-size: 1.125rem;
   font-weight: 500; }
+.discipline-detail .schedule-item {
+  margin-bottom: 30px; }
 
 .photos-list {
   margin-top: 40px; }

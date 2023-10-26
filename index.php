@@ -152,17 +152,17 @@ $APPLICATION->SetTitle("Клуб единоборств для всей семь
             );?>
         </div>
     </section>
-    <section class="main-section">
+    <div class="main-section">
         <div class="container">
-            <header class="main-section__header">
-                <h2 class="main-section__title">Отзывы</h2>
+            <div class="main-section__header">
+                <div class="main-section__title h2">Отзывы</div>
                 <div class="main-section__subtitle">Большинство стали сильнее физически и духовно, <br>научились ответственности и дисциплине, поверили в себя.</div>
-            </header>
+            </div>
             <div class="yandex-reviews">
                 <?= \Bitrix\Main\Config\Option::get('askaron.settings', 'UF_YANDEX_REVIEWS', ''); ?>
             </div>
         </div>
-    </section>
+    </div>
     <section class="main-section main-section_light-bg-color">
         <div class="container">
             <p>Добро пожаловать в клуб единоборств для всей семьи "Команда Е". Наш клуб расположен в Москве, ВАО, по адресу: ул. Электрозаводская, д. 58, рядом с метро Преображенская площадь.</p>
