@@ -11,7 +11,6 @@ ErrorDocument 404 /404.php
   RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 
-  Redirect 301 /disciplines/judo https://komandae.ru/disciplines/judo/
   Redirect 301 /people https://komandae.ru/team/
   Redirect 301 /table https://komandae.ru/schedule/
   Redirect 301 /rekv https://komandae.ru/requisites/

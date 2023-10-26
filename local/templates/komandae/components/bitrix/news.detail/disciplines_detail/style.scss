@@ -1,0 +1,75 @@
+.discipline-detail {
+
+  .breadcrumb .breadcrumb-item a {
+    color: var(--white-color);
+
+    &:hover {
+      color: var(--warning-color);
+    }
+  }
+
+  .breadcrumb .breadcrumb-item.active {
+    color: var(--white-color);
+    opacity: 0.5;
+  }
+
+  .first-screen__btn {
+    margin-top: 0;
+  }
+
+  &__preview-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.photos-list {
+  margin-top: 40px;
+
+  &__row {
+
+  }
+
+  &__col {
+    display: flex;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    position: relative;
+    //overflow: hidden;
+    //flex: 1;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+  }
+
+  &__img {
+    transition: transform 0.25s ease-in-out;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link:hover &__img {
+    transform: scale(1.0125);
+  }
+
+  &__item-figcaption {
+    padding: 15px;
+    border-top: 1px solid #ececec;
+  }
+
+  &__main-figcaption {
+    font-size: 0.85rem;
+    color: #6f6f6f;
+    text-align: center;
+  }
+}

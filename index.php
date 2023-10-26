@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Клуб единоборств для всей семь
                         class="btn btn-warning first-screen__btn"
                         data-bs-toggle="modal"
                         data-bs-target="#callbackModal"
-                        data-bs-modal-title="Записаться на занятие">Записаться на тренировку</button>
+                        data-bs-modal-title="Записаться на занятие">Записаться на занятие</button>
             </div>
         </div>
     </div>

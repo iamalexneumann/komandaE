@@ -1,1 +1,4 @@
 <?php
+$MESS['DISCIPLINES_DETAIL_CALLBACK_MODAL_TITLE'] = 'Записаться на занятие';
+$MESS['DISCIPLINES_DETAIL_BTN_ORDER_TEXT'] = 'Записаться на занятие';
+$MESS['DISCIPLINES_DETAIL_PHOTOS_ALT_TEXT'] = '- фото №';

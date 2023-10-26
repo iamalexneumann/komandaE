@@ -69,6 +69,14 @@ a {
   }
 }
 
+.pb-80 {
+  padding-bottom: 80px !important;
+
+  @media(max-width: 767.98px) {
+    padding-bottom: 40px !important;
+  }
+}
+
 h1,
 .h1,
 h2,
@@ -291,6 +299,7 @@ h6,
 
   &__title {
     color: var(--white-color);
+    margin-top: 10px;
     margin-bottom: 50px;
 
     @media (max-width: 575.98px) {

@@ -77,7 +77,7 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 ); ?>
-<ul class="page-navigation">
+<ul class="page-navigation pb-80">
     <?php if ($arResult['PREV_POST']): ?>
     <li class="page-navigation__item">
         <a href="<?= $arResult['PREV_POST']['DETAIL_PAGE_URL']; ?>"
