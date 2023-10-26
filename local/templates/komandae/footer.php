@@ -23,13 +23,14 @@ require($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/variables.php'
 use Bitrix\Main\Localization\Loc;
 
 $patterns = [
-// '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
+    '#^/disciplines/([0-9a-zA-Z_-]+)/$#',
 ];
 ?>
-<?php if ((!($CurDir === '/')) && !(use_wide_template($CurDir, $patterns) === true)): ?>
+    <?php if ((!($CurDir === '/')) && !(use_wide_template($CurDir, $patterns) === true)): ?>
     </div>
-<?php endif; ?>
+    <?php endif; ?>
 </main>
+
 <div class="form-section">
     <div class="container">
         <div class="form-section__header">
@@ -42,8 +43,7 @@ $patterns = [
             Array(
                 "COMPOSITE_FRAME_MODE" => "A",
                 "COMPOSITE_FRAME_TYPE" => "AUTO",
-//                "EMAIL_TO" => $siteparam_email,
-                "EMAIL_TO" => "iamalexneumann@yandex.ru",
+                "EMAIL_TO" => $siteparam_email,
                 "EVENT_MESSAGE_ID" => array(
                     0 => "7",
                 ),
@@ -161,8 +161,7 @@ $patterns = [
                     array(
                         "COMPOSITE_FRAME_MODE" => "A",
                         "COMPOSITE_FRAME_TYPE" => "AUTO",
-//                      "EMAIL_TO" => $siteparam_email,
-                        "EMAIL_TO" => "iamalexneumann@yandex.ru",
+                        "EMAIL_TO" => $siteparam_email,
                         "EVENT_MESSAGE_ID" => array(
                             0 => "7",
                         ),

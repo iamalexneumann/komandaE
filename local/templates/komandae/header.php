@@ -25,11 +25,7 @@ use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
 
 $patterns = [
-// '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
-];
-
-$other_patterns = [
-
+    '#^/disciplines/([0-9a-zA-Z_-]+)/$#',
 ];
 ?>
 <!DOCTYPE html>
@@ -143,8 +139,8 @@ $other_patterns = [
             </div>
         </div>
     </nav>
-    <main class="<?= (use_wide_template($CurDir, $patterns) === false) ? 'main-area' : 'wide-area'; ?>">
-    <?php if (!($CurDir === '/') && (use_wide_template($CurDir, $other_patterns) === false)): ?>
+    <main class="<?= (!($CurDir === '/') && (use_wide_template($CurDir, $patterns) === false)) ? 'main-area' : 'wide-area'; ?>">
+    <?php if (!($CurDir === '/') && (use_wide_template($CurDir, $patterns) === false)): ?>
     <header class="page-header">
         <div class="container">
             <?php
