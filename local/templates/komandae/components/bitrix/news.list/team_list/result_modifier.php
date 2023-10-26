@@ -10,7 +10,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CDatabase $DB
  * @var CBitrixComponentTemplate $this
  */
-use Bitrix\Main\Localization\Loc;
 
 if ($arResult['ITEMS']) {
     foreach ($arResult['ITEMS'] as $key => &$arItem) {
