@@ -561,6 +561,10 @@ h6,
       padding-top: 40px;
       padding-bottom: 40px; } }
 
+.wide-area {
+  position: relative;
+  overflow: hidden; }
+
 .breadcrumb {
   font-size: var(--font-size-small);
   margin: 0; }

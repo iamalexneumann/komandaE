@@ -746,7 +746,8 @@ h6,
 }
 
 .wide-area {
-
+  position: relative;
+  overflow: hidden;
 }
 
 .breadcrumb {
