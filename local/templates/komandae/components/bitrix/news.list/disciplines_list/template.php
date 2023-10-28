@@ -91,4 +91,5 @@ if ($arParams['DISPLAY_BOTTOM_PAGER']) {
     echo $arResult['NAV_STRING'];
 }
 ?>
+</div>
 <?php endif; ?>

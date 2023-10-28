@@ -214,17 +214,26 @@ h6,
   font-weight: 600; }
 .table p {
   margin: 0; }
+.table .small {
+  color: var(--dark-gray-color); }
+@media (max-width: 575.98px) {
+  .table_tariff .btn-outline-primary {
+    font-size: var(--font-size-smallest);
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 15px; } }
 
 .table > :not(caption) > * > * {
   padding: 20px 30px;
   color: var(--dark-color);
   border-bottom-width: 0;
-  text-align: center;
   box-shadow: none; }
   @media (max-width: 575.98px) {
     .table > :not(caption) > * > * {
       padding: 10px;
       font-size: var(--font-size-smallest); } }
+
+.table:not(.table_tariff) > :not(caption) > * > * {
+  text-align: center; }
 
 .table-striped th:first-of-type > * {
   text-align: left; }

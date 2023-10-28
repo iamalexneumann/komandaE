@@ -98,20 +98,40 @@ use Bitrix\Main\Localization\Loc;
             <?php endif; ?>
         </div>
     </div>
+
+    <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SCHEDULE']['~VALUE']): ?>
     <section class="team-section">
         <h2 class="team-section__title"><?= Loc::getMessage('TEAM_DETAIL_SCHEDULE_SECTION_TITLE'); ?></h2>
-        <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SCHEDULE']['~VALUE']) {
-            $APPLICATION->IncludeComponent(
-                "sprint.editor:blocks",
-                ".default",
-                array(
-                    "JSON" => $arResult['DISPLAY_PROPERTIES']['ATT_SCHEDULE']['~VALUE'],
-                ),
-                $component,
-                array(
-                    "HIDE_ICONS" => "Y"
-                )
-            );
-        } ?>
+        <?php
+        $APPLICATION->IncludeComponent(
+            "sprint.editor:blocks",
+            ".default",
+            array(
+                "JSON" => $arResult['DISPLAY_PROPERTIES']['ATT_SCHEDULE']['~VALUE'],
+            ),
+            $component,
+            array(
+                "HIDE_ICONS" => "Y"
+            )
+        );  ?>
     </section>
+    <?php endif; ?>
+
+    <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['~VALUE']): ?>
+    <section class="team-section">
+        <h2 class="team-section__title"><?= Loc::getMessage('TEAM_DETAIL_PRICE_SECTION_TITLE'); ?></h2>
+        <?php
+        $APPLICATION->IncludeComponent(
+            "sprint.editor:blocks",
+            ".default",
+            array(
+                "JSON" => $arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['~VALUE'],
+            ),
+            $component,
+            array(
+                "HIDE_ICONS" => "Y"
+            )
+        ); ?>
+    </section>
+    <?php endif; ?>
 </div>

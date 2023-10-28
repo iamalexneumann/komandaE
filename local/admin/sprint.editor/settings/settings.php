@@ -58,6 +58,7 @@ $settings = [
                 'value' => array(
                     'default' => 'По умолчанию',
                     'schedule' => 'Расписание',
+                    'tariff' => 'Цены',
                 )
             ),
         ],

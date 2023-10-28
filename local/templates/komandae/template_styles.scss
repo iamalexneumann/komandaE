@@ -233,13 +233,26 @@ h6,
   p {
     margin: 0;
   }
+
+  .small {
+    color: var(--dark-gray-color);
+  }
+
+  &_tariff {
+    .btn-outline-primary {
+      @media (max-width: 575.98px) {
+        font-size: var(--font-size-smallest);
+        --bs-btn-padding-y: 10px;
+        --bs-btn-padding-x: 15px;
+      }
+    }
+  }
 }
 
-.table>:not(caption)>*>* {
+.table > :not(caption) > * >* {
   padding: 20px 30px;
   color: var(--dark-color);
   border-bottom-width: 0;
-  text-align: center;
   box-shadow: none;
 
   @media (max-width: 575.98px) {
@@ -248,11 +261,15 @@ h6,
   }
 }
 
-.table-striped th:first-of-type>* {
+.table:not(.table_tariff) > :not(caption) > * > * {
+  text-align: center;
+}
+
+.table-striped th:first-of-type > * {
   text-align: left;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>* {
+.table-striped > tbody > tr:nth-of-type(odd) > * {
   background-color: #FAFAFA;
 }
 

@@ -40,6 +40,7 @@ $APPLICATION->SetTitle("Наша команда");
 			2 => "ATT_DETAIL_TEXT",
 			3 => "ATT_PREVIEW_TEXT",
 			4 => "ATT_SCHEDULE",
+			5 => "ATT_PRICE",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
