@@ -195,11 +195,12 @@ function ShowNavChain(string $template = '.default')
  * @param string $one - склонение для "просмотр"
  * @param string $four - склонение для "просмотра"
  * @param string $five - склонение для "просмотров"
- * @param int $views_counter - число
+ * @param int $number - число
  * @return string
  */
-function get_text_with_declension (string $one, string $four, string $five, int $views_counter = 0):string
+function get_text_with_declension (string $one, string $four, string $five, int $number = 0):string
 {
+    $experience = date('Y') - $number;
     $viewsDeclension = new Declension($one, $four, $five);
-    return $views_counter . ' ' . $viewsDeclension->get($views_counter);
+    return $experience . ' ' . $viewsDeclension->get($experience);
 }

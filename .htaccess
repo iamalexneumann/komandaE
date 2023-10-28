@@ -8,7 +8,7 @@ ErrorDocument 404 /404.php
   RewriteCond %{HTTP_HOST} ^komandae.beget.tech$ [NC]
   RewriteRule ^(.*)$ http://komandae.ru/$1 [R=301,L]
 
-  RewriteCond %{HTTP_HOST} ^xn--80ajecbnebe6av1b.xn--p1ai$ [NC]
+  RewriteCond %{HTTP_HOST} ^xn--80aalfvmif.xn--p1ai$ [NC]
   RewriteRule ^(.*)$ http://komandae.ru/$1 [R=301,L]
 
   RewriteCond %{HTTPS} off
