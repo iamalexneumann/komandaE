@@ -70,4 +70,12 @@ $APPLICATION->SetTitle("Контакты");
             <div class="page-contacts__text page-contacts__text_after">Станьте частью нашей Команды!</div>
         </div>
     </div>
+    <?php
+    $APPLICATION->IncludeComponent(
+        "sprint.editor:blocks",
+        ".default",
+        Array(
+            "JSON" => \Bitrix\Main\Config\Option::get('askaron.settings', 'UF_INDEX_GALLERY', '')
+        )
+    ); ?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
